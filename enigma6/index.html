@@ -29,6 +29,10 @@
             transition: opacity 2s ease-in-out, transform 2s ease-in-out;
         }
 
+        .transparent {
+            opacity: 0;
+        }
+
         .transparent_speak {
             opacity: 0;
             transform: rotate(25deg);
@@ -39,18 +43,20 @@
             transform: rotate(-25deg);
         }
 
-        .answer {
+        #answer {
             position: relative;
             left: 6.5em;
             top: -1em;
             font-size: 2em;
-            font-weight: bold;
-            color: red;
             transform: rotate(-25deg);
         }
 
-        .answer p {
-            display: none;
+        #answer p {
+            position: absolute;
+            -webkit-transition: opacity 0.5s ease-in-out;
+            -moz-transition: opacity 0.5s ease-in-out;
+            -o-transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -60,7 +66,7 @@
     <div id="deercontainer">
         <img src="deer_rest.png" alt="Santa's Reindeer at rest" id="deer_rest" class="" />
         <img src="deer_speak.png" alt="Santa's Reindeer speaking" id="deer_speak" class="transparent_speak" />
-        <div class="answer">
+        <div id="answer">
             <p id="more" style="color: steelblue;">moooooore</p>
             <p id="less" style="color: teal;">leeeeeess</p>
             <p id="exact" style="color: rebeccapurple">exaaaaact</p>
@@ -84,24 +90,32 @@
         var more = document.getElementById("more");
         var less = document.getElementById("less");
         var exact = document.getElementById("exact");
+        // add transparency to all answers
+        more.classList.add("transparent");
+        less.classList.add("transparent");
+        exact.classList.add("transparent");
         if (answer == "more") {
-            more.style.display = "block";
-            less.style.display = "none";
-            exact.style.display = "none";
+            more.classList.remove("transparent");
+            // more.style.display = "block";
+            // less.style.display = "none";
+            // exact.style.display = "none";
         } else if (answer == "less") {
-            more.style.display = "none";
-            less.style.display = "block";
-            exact.style.display = "none";
+            less.classList.remove("transparent");
+            // more.style.display = "none";
+            // less.style.display = "block";
+            // exact.style.display = "none";
         } else if (answer == "exact") {
-            more.style.display = "none";
-            less.style.display = "none";
-            exact.style.display = "block";
+            exact.classList.remove("transparent");
+            // more.style.display = "none";
+            // less.style.display = "none";
+            // exact.style.display = "block";
         } else {
-            more.style.display = "none";
-            less.style.display = "none";
-            exact.style.display = "none";
+            // more.style.display = "none";
+            // less.style.display = "none";
+            // exact.style.display = "none";
         }
     }
+    answer();
 </script>
 
 </html>
