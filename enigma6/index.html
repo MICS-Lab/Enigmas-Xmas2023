@@ -76,7 +76,7 @@
         Have you done more, less, or exactly
         <input type="text" id="N" name="N" minlength="1" maxlength="3" size="2" />
         stops so far?
-        <button>Ask</button>
+        <button onclick="submit()">Ask</button>
     </p>
 </body>
 <script>
@@ -118,6 +118,7 @@
     answer();
 
     function full_answer(ans) {
+        const DISPLAY_TIME = 3000
         toggle();
         setTimeout(function () {
             answer(ans);
