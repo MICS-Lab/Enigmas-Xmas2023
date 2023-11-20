@@ -137,6 +137,10 @@
                 ASK_BTN.disabled = false;
                 ASK_BTN.innerText = "Ask (" + (MAX_TRIES - TRIES) + " questions left)";
             }
+            if (TRIES >= MAX_TRIES) {
+                ASK_BTN.disabled = true;
+                ASK_BTN.innerText = "Ask (no more questions left)";
+            }
         }, DISPLAY_TIME);
     }
 
