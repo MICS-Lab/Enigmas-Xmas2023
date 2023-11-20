@@ -132,6 +132,28 @@
             answer();
         }, DISPLAY_TIME);
     }
+
+    function submit() {
+        var N = Number(document.getElementById("N").value);
+        if (isNaN(N)) {
+            alert("Please enter a number.");
+            return;
+        }
+        if (TRIES >= MAX_TRIES) {
+            alert("You have reached the maximum number of tries; refresh to try again.");
+            return;
+        }
+        TRIES++;
+        if (N == NUMBER) {
+            full_answer("exact");
+        } else if (N > NUMBER) {
+            full_answer("less");
+        } else if (N < NUMBER) {
+            full_answer("more");
+        } else {
+            full_answer();
+        }
+    }
 </script>
 
 </html>
