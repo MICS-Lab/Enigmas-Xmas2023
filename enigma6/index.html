@@ -86,7 +86,7 @@
         deer_rest.classList.toggle("transparent_rest");
         deer_speak.classList.toggle("transparent_speak");
     }
-    function answer(answer) {
+    function answer(ans) {
         var more = document.getElementById("more");
         var less = document.getElementById("less");
         var exact = document.getElementById("exact");
@@ -94,17 +94,17 @@
         more.classList.add("transparent");
         less.classList.add("transparent");
         exact.classList.add("transparent");
-        if (answer == "more") {
+        if (ans == "more") {
             more.classList.remove("transparent");
             // more.style.display = "block";
             // less.style.display = "none";
             // exact.style.display = "none";
-        } else if (answer == "less") {
+        } else if (ans == "less") {
             less.classList.remove("transparent");
             // more.style.display = "none";
             // less.style.display = "block";
             // exact.style.display = "none";
-        } else if (answer == "exact") {
+        } else if (ans == "exact") {
             exact.classList.remove("transparent");
             // more.style.display = "none";
             // less.style.display = "none";
@@ -116,6 +116,17 @@
         }
     }
     answer();
+
+    function full_answer(ans) {
+        toggle();
+        setTimeout(function () {
+            answer(ans);
+        }, 500);
+        setTimeout(toggle, 5000);
+        setTimeout(function () {
+            answer();
+        }, 5000);
+    }
 </script>
 
 </html>
