@@ -76,13 +76,14 @@
         Have you done more, less, or exactly
         <input type="text" id="N" name="N" minlength="1" maxlength="3" size="2" />
         stops so far?
-        <button onclick="submit()">Ask</button>
+        <button id="ask_btn">Ask</button>
     </p>
 </body>
 <script>
     var TRIES = 0;
     var MAX_TRIES = 7;
     var NUMBER = Math.floor(Math.random() * 127) + 1;
+    var ASK_BTN = document.getElementById("ask_btn");
 
     function toggle() {
         var deer_rest = document.getElementById("deer_rest");
@@ -123,6 +124,7 @@
 
     function full_answer(ans) {
         const DISPLAY_TIME = 3000
+        ASK_BTN.disabled = true;
         toggle();
         setTimeout(function () {
             answer(ans);
@@ -130,6 +132,9 @@
         setTimeout(toggle, DISPLAY_TIME);
         setTimeout(function () {
             answer();
+            if (ans !== "exact" && TRIES < MAX_TRIES) {
+                ASK_BTN.disabled = false;
+            }
         }, DISPLAY_TIME);
     }
 
@@ -154,6 +159,7 @@
             full_answer();
         }
     }
+    ASK_BTN.addEventListener("click", submit);
 </script>
 
 </html>
