@@ -84,6 +84,7 @@
     var MAX_TRIES = 7;
     var NUMBER = Math.floor(Math.random() * 127) + 1;
     var ASK_BTN = document.getElementById("ask_btn");
+    ASK_BTN.innerText = "Ask (" + (MAX_TRIES - TRIES) + " questions left)";
 
     function toggle() {
         var deer_rest = document.getElementById("deer_rest");
@@ -134,6 +135,7 @@
             answer();
             if (ans !== "exact" && TRIES < MAX_TRIES) {
                 ASK_BTN.disabled = false;
+                ASK_BTN.innerText = "Ask (" + (MAX_TRIES - TRIES) + " questions left)";
             }
         }, DISPLAY_TIME);
     }
