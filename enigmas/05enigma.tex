@@ -8,6 +8,7 @@
 %for images
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{wrapfig}
 %for color
 \usepackage{xcolor}
 %for title
@@ -26,10 +27,16 @@
 	
 	[statement...]
 	
-	\begin{center}
-		\includegraphics[height=200pt]{00example.png}\\
-		Legend
-	\end{center}
+	
+	\begin{wrapfigure}{l}{0.25\textwidth}
+		\includegraphics[width=0.9\linewidth]{05_xmas_tree.png} 
+		\caption{Caption1}
+	\end{wrapfigure}
+	
+%	\begin{center}
+%		\includegraphics[height=200pt]{05_xmas_tree.png}\\
+%		Legend
+%	\end{center}
 	
 	\begin{center}
 		\begin{tikzpicture}
@@ -37,7 +44,7 @@
 			\tikzstyle{every node}=[circle,font=\LARGE,draw=green!80,fill=green!10]
 			\node at (1,1) {1};
 		\end{tikzpicture}
-		
+		\hspace{1cm}
 		\begin{tikzpicture}
 			\filldraw[fill=black!30!green, fill=black!60!green] (-1,-0.5) -- (1,2) -- (3,-0.5) -- (-1,-0.5);
 			\tikzstyle{every node}=[circle,font=\LARGE,draw=green!80,fill=green!10]
@@ -45,7 +52,7 @@
 			\node at (2,0) {2};
 			\node at (0,0) {3};
 		\end{tikzpicture}
-		
+				\hspace{1cm}
 		\begin{tikzpicture}
 			\filldraw[fill=black!30!green, fill=black!60!green] (-1,-0.5) -- (2,3) -- (5,-0.5) -- (-1,-0.5);
 			\tikzstyle{every node}=[circle,font=\LARGE,draw=green!80,fill=green!10]
