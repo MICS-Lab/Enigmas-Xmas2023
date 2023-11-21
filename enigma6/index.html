@@ -82,7 +82,7 @@
 <script>
     var TRIES = 0;
     var MAX_TRIES = 7;
-    var NUMBER = Math.floor(Math.random() * 127) + 1;
+    var NUMBER = 2*Math.floor(Math.random() * 64) + 1;
     var ASK_BTN = document.getElementById("ask_btn");
     ASK_BTN.innerText = "Ask (" + (MAX_TRIES - TRIES) + " questions left)";
 
