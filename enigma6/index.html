@@ -96,30 +96,16 @@
         var more = document.getElementById("more");
         var less = document.getElementById("less");
         var exact = document.getElementById("exact");
-        // add transparency to all answers
         more.classList.add("transparent");
         less.classList.add("transparent");
         exact.classList.add("transparent");
         if (ans == "more") {
             more.classList.remove("transparent");
-            // more.style.display = "block";
-            // less.style.display = "none";
-            // exact.style.display = "none";
         } else if (ans == "less") {
             less.classList.remove("transparent");
-            // more.style.display = "none";
-            // less.style.display = "block";
-            // exact.style.display = "none";
         } else if (ans == "exact") {
             exact.classList.remove("transparent");
-            // more.style.display = "none";
-            // less.style.display = "none";
-            // exact.style.display = "block";
-        } else {
-            // more.style.display = "none";
-            // less.style.display = "none";
-            // exact.style.display = "none";
-        }
+        } else {}
     }
     answer();
 
