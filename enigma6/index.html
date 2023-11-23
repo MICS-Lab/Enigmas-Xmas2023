@@ -8,6 +8,11 @@
     <link rel="icon" type="image/png" href="deer_icon.png" />
     <title>Santa's Reindeer</title>
     <style>
+        @font-face {
+            font-family: ReindeerChristmas;
+            src: url(ReindeerChristmas.otf);
+        }
+
         body {
             display: flex;
             flex-direction: column;
@@ -128,7 +133,7 @@
                 ASK_BTN.disabled = true;
                 ASK_BTN.innerText = "Ask (no more questions left)";
             }
-            if (ans == "exact"){
+            if (ans == "exact") {
                 var code_p = document.getElementById("code");
                 code_p.innerText = 'Answer: "TrustMeIDidItIDidNotCheat"'
             }
