@@ -4,7 +4,7 @@ function checkPassword0() {
   var sha_password = SHA256(password.replace(/ /g, ''));
   if (
     sha_password ==
-    "35135aaa6cc23891b40cb3f378c53a17a1127210ce60e125ccf03efcfdaec458"
+    "9400f1b21cb527d7fa3d3eabba93557a18ebe7a2ca4e471cfe5e4c5b4ca7f767"
   ) {
     document.getElementById("enigma0-check").style = "display: block";
     document.getElementById("enigma0-no-check").style = "display: none";
