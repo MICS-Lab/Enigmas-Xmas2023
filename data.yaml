@@ -13,3 +13,5 @@ enigmas:
     description: Santa’s Reindeer
   - answer: 42000
     description: New Santa’s Sleigh
+  - answer: 5.26
+    description: Christmas Balls
