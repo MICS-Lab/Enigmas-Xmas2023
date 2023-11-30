@@ -3,7 +3,7 @@
 A series of enigmas for the lab 2023 Xmas event.
 
 Go to this website:
-[https://mics-lab.github.io/Enigmas-Xmas2022/](https://mics-lab.github.io/Enigmas-Xmas2023/)
+https://mics-lab.github.io/Enigmas-Xmas2023/
 
 Or scan the following QR code:
 
