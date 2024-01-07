@@ -2,9 +2,8 @@
 
 A series of enigmas for the lab 2023 Xmas event.
 
-Go to this website:
+Answering website:
 https://mics-lab.github.io/Enigmas-Xmas2023/
 
-Or scan the following QR code:
-
-<img src="QRcode.png" alt="QR code to website" style="width:250px;"/>
+Statements website:
+https://mics-lab.github.io/Enigmas-Xmas2023/enigmas/
